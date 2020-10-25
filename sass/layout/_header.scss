@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.nav-list {
+  list-style-type: none;
+
+  &__item {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  &__link {
+    color: $color-secondary;
+    padding: 5px;
+    transition: all 0.2s;
+    &:hover {
+      color: $color-gray-dark;
+    }
+  }
+}
