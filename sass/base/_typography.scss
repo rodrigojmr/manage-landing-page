@@ -1,0 +1,16 @@
+body {
+  color: $color-secondary;
+}
+
+.heading {
+  &--1 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
+.text {
+  font-weight: 200;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}

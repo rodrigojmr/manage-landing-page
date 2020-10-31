@@ -3,9 +3,16 @@
   padding: 1rem 1.5rem;
 
   border-radius: 20px;
+  transition: all 0.2s;
+  cursor: pointer;
 
   &--primary {
     background-color: $color-primary;
     color: white;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(130%);
   }
 }

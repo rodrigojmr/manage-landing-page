@@ -1,0 +1,19 @@
+.hero {
+  display: flex;
+  padding: 100px 0;
+
+  & > * {
+    flex: 0 0 50%;
+  }
+
+  &__text {
+    padding-left: 30px;
+    text-align: left;
+  }
+
+  .heading {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+}

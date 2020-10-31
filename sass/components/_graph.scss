@@ -1,0 +1,107 @@
+.graph {
+  display: grid;
+  grid-template-columns: repeat(4, 125px);
+  grid-template-rows: repeat(3, 250px);
+  gap: 10px;
+  grid-template-areas: '';
+
+  > * {
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+  }
+
+  align-items: flex-start;
+}
+
+.box {
+  grid-column: 1 / 3;
+  > * {
+    height: 50%;
+    position: relative;
+  }
+}
+
+$bar-width: 15%;
+$bar-gutter: 6%;
+
+.bar {
+  position: absolute;
+  width: $bar-width;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: translateZ(0) scale(1, 1);
+
+  &.bar-col {
+    &-1 {
+      left: 0;
+    }
+    &-2 {
+      left: calc(#{$bar-gutter} + #{$bar-width});
+    }
+    &-3 {
+      left: calc((#{$bar-gutter} * 2) + (#{$bar-width} * 2));
+    }
+    &-4 {
+      left: calc((#{$bar-gutter} * 3) + (#{$bar-width} * 3));
+    }
+    &-5 {
+      left: calc((#{$bar-gutter} * 4) + (#{$bar-width} * 4));
+    }
+  }
+}
+
+div[id^='bar-top-'] {
+  bottom: 0;
+  transform-origin: bottom;
+  border-radius: 5px 5px 0 0;
+}
+div[id^='bar-bottom-'] {
+  top: 0;
+  transform-origin: top;
+  border-radius: 0px 0px 5px 5px;
+}
+.pie-wrapper {
+  grid-column: 3 / 5;
+  display: flex;
+  align-items: center;
+}
+.pie {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 35px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(var(--v), $color-primary 50%, transparent 0)
+      center/calc(var(--s) * 100%) border-box,
+    linear-gradient(var(--v2), $color-secondary 50%, transparent 0)
+      center/calc(100% - var(--s2) * 100%) border-box,
+    linear-gradient(to right, #fff 50%, $color-secondary 0) border-box;
+}
+
+.stats {
+  grid-column: 2 / 4;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    background-color: rgb(240, 235, 235);
+  }
+
+  &__text {
+    font-size: 1.3rem;
+  }
+
+  &__1 {
+    flex: 0 0 100%;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  &__2,
+  &__3 {
+    flex: 50%;
+  }
+}
