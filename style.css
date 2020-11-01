@@ -273,6 +273,42 @@ body {
     .nav-list__link:hover {
       color: #9095a7; }
 
+.footer {
+  padding: 6rem 5vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: #1d1e25;
+  color: white; }
+  .footer .socials {
+    grid-column: 1 / span 1;
+    grid-row: 4/-1; }
+  .footer__list--1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1; }
+  .footer__list--2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / -1; }
+  .footer__list {
+    display: flex;
+    flex-direction: column; }
+  .footer__list-item {
+    align-self: flex-start;
+    transition: all 0.2s; }
+    .footer__list-item:hover {
+      color: #f25f3a; }
+    .footer__list-item:not(:last-child) {
+      margin-bottom: 2rem; }
+  .footer .copyright {
+    grid-column: 4 / -1;
+    grid-row: 4 / -1; }
+
+.signup-form .input {
+  border-radius: 30px;
+  padding: 1rem 0.9rem;
+  border: 2px solid #f25f3a;
+  color: #f25f3a; }
+
 .features {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -308,7 +344,9 @@ body {
     font-weight: 600; }
 
 .testimonials-section {
-  padding: 50px 0; }
+  padding: 50px 0;
+  padding-bottom: 100px;
+  text-align: center; }
 
 .testimonials {
   display: grid;
@@ -345,6 +383,38 @@ body {
   .testimonial__name {
     font-weight: 600; }
 
+.cta {
+  position: relative;
+  padding: 4rem 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f25f3a;
+  color: white;
+  overflow: hidden; }
+  .cta .btn {
+    z-index: 1; }
+  .cta::before {
+    content: '';
+    background-image: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -17%;
+    left: -6%;
+    width: 60%;
+    height: 117%;
+    opacity: 0.1; }
+  .cta::after {
+    content: '';
+    background-image: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -394%;
+    right: -84%;
+    width: 103%;
+    height: 493%;
+    opacity: 0.1; }
+
 .btn {
   display: inline-block;
   padding: 1rem 1.5rem;
@@ -354,9 +424,27 @@ body {
   .btn--primary {
     background-color: #f25f3a;
     color: white; }
+  .btn--secondary {
+    background-color: white;
+    color: #f25f3a; }
   .btn:hover {
     transform: translateY(-2px);
-    filter: brightness(130%); }
+    filter: brightness(130%);
+    box-shadow: 0 10px 7px 3px rgba(0, 0, 0, 0.1); }
+
+button.btn {
+  border: none; }
+
+.social-icon {
+  fill: white;
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s;
+  cursor: pointer; }
+  .social-icon:not(:last-child) {
+    margin-right: 10px; }
+  .social-icon:hover {
+    fill: #f25f3a; }
 
 .graph {
   display: grid;

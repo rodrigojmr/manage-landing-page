@@ -1,168 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Manage landing page</title>
-  </head>
-  <body>
-    <nav class="header container">
-      <svg
-        class="header__logo"
-        xmlns="http://www.w3.org/2000/svg"
-        width="146"
-        height="24"
-      >
-        <g fill="none" fill-rule="evenodd">
-          <path
-            fill="#242D52"
-            fill-rule="nonzero"
-            d="M40.014 16.809V8.553c0-1.577.366-2.82 1.098-3.73.733-.91 1.65-1.365 2.75-1.365 2.158 0 3.237 1.577 3.237 4.731v8.62h3.782v-9.58c0-2.415-.5-4.22-1.503-5.417C48.376.615 46.945.017 45.084.017c-1.222 0-2.34.234-3.352.703a6.833 6.833 0 00-2.56 2.043h-.066C38.126.932 36.486.017 34.184.017c-.969 0-1.902.217-2.799.653a6.976 6.976 0 00-2.353 1.878h-.05V.265H25.2v16.527h3.782V8.553c0-1.577.372-2.82 1.115-3.73.743-.91 1.693-1.365 2.849-1.365 2.19 0 3.286 1.577 3.286 4.731v8.62h3.782zm21.101.248c2.246 0 3.997-.827 5.252-2.482h.05v2.217h3.616V.265h-3.782V2.25h-.066C64.93.761 63.23.017 61.082.017a7.76 7.76 0 00-5.681 2.415c-.705.75-1.26 1.66-1.668 2.73a9.589 9.589 0 00-.611 3.44c0 1.258.203 2.416.61 3.475.408 1.059.964 1.952 1.669 2.68a7.348 7.348 0 002.535 1.696 8.325 8.325 0 003.18.604zm.595-3.441c-1.399 0-2.538-.466-3.419-1.398-.88-.932-1.321-2.132-1.321-3.599 0-1.555.454-2.804 1.362-3.747.909-.943 2.04-1.414 3.394-1.414 1.343 0 2.458.493 3.345 1.48.886.988 1.33 2.215 1.33 3.681 0 1.467-.455 2.667-1.363 3.599-.909.932-2.018 1.398-3.328 1.398zm27.112 3.193V7.064c0-2.393-.536-4.166-1.61-5.319C86.14.593 84.655.017 82.762.017a7.373 7.373 0 00-3.056.645 6.958 6.958 0 00-2.477 1.87h-.05V.264h-3.782v16.527h3.782V8.487c0-1.588.388-2.823 1.164-3.706.777-.882 1.814-1.323 3.113-1.323.595 0 1.104.077 1.528.231.424.155.796.406 1.115.753.32.348.556.819.71 1.415.154.595.231 1.323.231 2.183v8.769h3.782zm10.218.248c2.246 0 3.996-.827 5.252-2.482h.05v2.217h3.616V.265h-3.782V2.25h-.066C102.855.761 101.154.017 99.007.017a7.76 7.76 0 00-5.682 2.415c-.704.75-1.26 1.66-1.668 2.73a9.589 9.589 0 00-.61 3.44c0 1.258.203 2.416.61 3.475.408 1.059.964 1.952 1.668 2.68a7.348 7.348 0 002.536 1.696 8.325 8.325 0 003.179.604zm.594-3.441c-1.398 0-2.538-.466-3.418-1.398-.881-.932-1.322-2.132-1.322-3.599 0-1.555.455-2.804 1.363-3.747.908-.943 2.04-1.414 3.394-1.414 1.343 0 2.458.493 3.344 1.48.886.988 1.33 2.215 1.33 3.681 0 1.467-.455 2.667-1.363 3.599-.908.932-2.018 1.398-3.328 1.398zm19.07 10.125c1.2 0 2.274-.14 3.22-.422.947-.281 1.743-.673 2.387-1.175a6.385 6.385 0 001.602-1.844 8.14 8.14 0 00.916-2.383c.188-.86.281-1.803.281-2.829V.265h-3.782v1.737h-.066a7.059 7.059 0 00-2.353-1.49A7.62 7.62 0 00118.142 0c-1.508 0-2.862.358-4.062 1.075-1.2.717-2.134 1.713-2.8 2.987-.666 1.273-.999 2.705-.999 4.293 0 1.61.35 3.038 1.049 4.285.699 1.246 1.66 2.203 2.882 2.87 1.222.667 2.598 1.001 4.129 1.001 2.047 0 3.716-.673 5.004-2.018h.066v1.753c0 1.17-.43 2.14-1.288 2.912-.86.772-2.07 1.158-3.634 1.158-1.068 0-2.006-.132-2.816-.397-.809-.265-1.742-.678-2.799-1.24l-.892 3.341c.925.552 1.966.976 3.122 1.274 1.156.298 2.356.447 3.6.447zm.132-10.72c-1.365 0-2.491-.434-3.377-1.3-.887-.865-1.33-2.026-1.33-3.482 0-1.4.435-2.542 1.305-3.425.87-.882 2.004-1.323 3.402-1.323 1.332 0 2.442.435 3.328 1.307.886.871 1.33 2.002 1.33 3.391 0 1.401-.433 2.556-1.297 3.466-.864.91-1.985 1.365-3.361 1.365zm19.086 4.036c1.542 0 2.899-.281 4.071-.844 1.173-.562 2.133-1.323 2.882-2.283l-2.642-2.266c-1.035 1.301-2.406 1.952-4.113 1.952-1.21 0-2.237-.337-3.08-1.01-.842-.672-1.384-1.593-1.627-2.762h12.024c.066-.397.099-.9.099-1.506 0-1.599-.325-3.027-.975-4.285a7.198 7.198 0 00-2.807-2.961c-1.222-.717-2.632-1.075-4.228-1.075a8.191 8.191 0 00-3.188.62c-.99.414-1.844.99-2.56 1.729-.715.739-1.277 1.638-1.684 2.696-.407 1.06-.611 2.212-.611 3.458 0 1.688.369 3.185 1.106 4.492.738 1.307 1.746 2.308 3.023 3.003 1.277.695 2.714 1.042 4.31 1.042zm3.815-10.274h-8.257c.264-1.059.776-1.878 1.535-2.457.76-.579 1.663-.868 2.709-.868 1.057 0 1.93.298 2.618.893.688.596 1.153 1.406 1.395 2.432z"
-          />
-          <g fill="#F3603C">
-            <path
-              d="M2.786 10.286c1.538 0 2.785 1.279 2.785 2.857C5.571 14.72 4.324 16 2.786 16 1.247 16 0 14.72 0 13.143c0-1.578 1.247-2.857 2.786-2.857zM2.786 0C4.324 0 5.57 1.28 5.57 2.857c0 1.578-1.247 2.857-2.785 2.857C1.247 5.714 0 4.435 0 2.857 0 1.28 1.247 0 2.786 0zm10.028 0C14.353 0 15.6 1.28 15.6 2.857c0 1.578-1.247 2.857-2.786 2.857-1.538 0-2.785-1.279-2.785-2.857C10.029 1.28 11.276 0 12.814 0z"
-            />
-            <ellipse
-              cx="12.814"
-              cy="13.257"
-              opacity=".5"
-              rx="2.786"
-              ry="2.857"
-            />
-          </g>
-        </g>
-      </svg>
-      <ul class="nav-list">
-        <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Pricing</a>
-        </li>
-        <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Prduct</a>
-        </li>
-        <li class="nav-list__item">
-          <a href="#" class="nav-list__link">About Us</a>
-        </li>
-        <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Careers</a>
-        </li>
-        <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Community</a>
-        </li>
-      </ul>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Manage landing page</title>
+</head>
+
+<body>
+  <nav class="header container">
+    <img src="/images/logo.svg" alt="Logo" class="header__logo">
+    <ul class="nav-list">
+      <li class="nav-list__item">
+        <a href="#" class="nav-list__link">Pricing</a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#" class="nav-list__link">Product</a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#" class="nav-list__link">About Us</a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#" class="nav-list__link">Careers</a>
+      </li>
+      <li class="nav-list__item">
+        <a href="#" class="nav-list__link">Community</a>
+      </li>
+    </ul>
+    <a href="#" class="btn btn--primary">Get Started</a>
+  </nav>
+  <main>
+    <section class="hero container">
+      <div class="hero__text">
+        <h1 class="heading heading--1 u-margin-top-small">Bring everyone</br> together to build</br> better products.
+        </h1>
+        <p class="text u-margin-bottom-small">Manage makes it simple for software teams</br>
+          to plan day-to-day tasks while keeping the</br> larger team goals in view.</p>
+        <div class="btn btn--primary">Get Started</div>
+      </div>
+      <div class="graph">
+        <div class="box">
+          <div class="box-top">
+            <div class="bar u-bg-primary bar-col-2" id="bar-top-1"></div>
+            <div class="bar u-bg-secondary bar-col-4" id="bar-top-2"></div>
+            <div class="bar u-bg-primary bar-col-4" id="bar-top-3"></div>
+          </div>
+          <div class="box-bottom">
+            <div class="bar u-bg-primary bar-col-1" id="bar-bottom-1"></div>
+            <div class="bar u-bg-secondary bar-col-1" id="bar-bottom-2"></div>
+            <div class="bar u-bg-secondary bar-col-2" id="bar-bottom-3"></div>
+            <div class="bar u-bg-secondary bar-col-3" id="bar-bottom-4"></div>
+            <div class="bar u-bg-primary bar-col-3" id="bar-bottom-5"></div>
+            <div class="bar u-bg-primary bar-col-5" id="bar-bottom-6"></div>
+            <div class="bar u-bg-secondary bar-col-5" id="bar-bottom-7"></div>
+          </div>
+        </div>
+        <div class="pie-wrapper">
+          <div class="pie" style="--v:90deg;--v2:90deg;--s:1;--s2:1"></div>
+        </div>
+        <div class="stats">
+          <div class="stats__1">
+            89.74%</br>
+            <span class="stats__text">More Productive</span>
+            </p>
+          </div>
+          <div class="stats__2">+1.5%</div>
+          <div class="stats__3">88.24%</div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+    <section class="features container">
+      <div class="features__title">
+        <h1 class="heading heading--1">What's different about Manage?</h1>
+        <p class="text"> Manage provides all the functionality your team needs, without the complexity. Our software is
+          tailor-made for modern digital product teams.</p>
+      </div>
+      <div class="features-item">
+        <div class="features-item__number">01</div>
+        <h4 class="features-item__title">Track company-wide progress</h4>
+        <p class="features-item__description text">See how your day-to-day tasks fit into the wider vision. Go from
+          tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the
+          bigger picture again.</p>
+      </div>
+      <div class="features-item">
+        <div class="features-item__number">02</div>
+        <h4 class="features-item__title">Advanced built-in reports</h4>
+        <p class="features-item__description text">Set internal delivery estimates and track progress toward company
+          goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.
+        </p>
+      </div>
+      <div class="features-item">
+        <div class="features-item__number">03</div>
+        <h4 class="features-item__title">Everything you need in one place</h4>
+        <p class="features-item__description text">Stop jumping from one service to another to communicate, store files,
+          track tasks and share documents. Manage offers an all-in-one team productivity solution.</p>
+      </div>
+    </section>
+    <section class="testimonials-section">
+      <h1 class="heading heading--1 u-center-text u-margin-bottom-medium">What they've said</h1>
+      <div class="testimonials">
+        <div class="testimonial">
+          <img src="/images/avatar-anisha.png" alt="Anisha Li" class="testimonial__img">
+          <h3 class="testimonial__name u-margin-bottom-small">Anisha Li</h3>
+          <p class="text testimonial__quote">“Manage has supercharged our team’s workflow. The ability to maintain
+            visibility on larger milestones at all times keeps everyone motivated.”</p>
+        </div>
+        <div class="testimonial">
+          <img src="/images/avatar-ali.png" alt="Ali Bavo" class="testimonial__img">
+          <h3 class="testimonial__name u-margin-bottom-small">Ali Bravo</h3>
+          <p class="text testimonial__quote">“We have been able to cancel so many other subscriptions since using
+            Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
+        </div>
+        <div class="testimonial">
+          <img src="/images/avatar-richard.png" alt="Richard Watts" class="testimonial__img">
+          <h3 class="testimonial__name u-margin-bottom-small">Richard Watts</h3>
+          <p class="text testimonial__quote">“Manage allows us to provide structure and process. It keeps us organized
+            and focused. I can’t stop recommending them to everyone I talk to!”</p>
+        </div>
+        <div class="testimonial">
+          <img src="/images//avatar-shanai.png" alt="Shanai Gough" class="testimonial__img">
+          <h3 class="testimonial__name u-margin-bottom-small">Shanai Gough</h3>
+          <p class="text testimonial__quote">“Their software allows us to track, manage and collaborate on our projects
+            from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
+        </div>
+      </div>
       <a href="#" class="btn btn--primary">Get Started</a>
-    </nav>
-    <main>
-      <section class="hero container">
-        <div class="hero__text">
-          <h1 class="heading heading--1 u-margin-top-small">Bring everyone</br> together to build</br> better products.</h1>
-          <p class="text u-margin-bottom-small">Manage makes it simple for software teams</br>
-            to plan day-to-day tasks while keeping the</br> larger team goals in view.</p>
-           <div class="btn btn--primary">Get Started</div>
-        </div>
-        <div class="graph">
-          <div class="box">
-            <div class="box-top">
-              <div class="bar u-bg-primary bar-col-2" id="bar-top-1"></div>
-              <div class="bar u-bg-secondary bar-col-4" id="bar-top-2"></div>
-              <div class="bar u-bg-primary bar-col-4" id="bar-top-3"></div>
-            </div>
-            <div class="box-bottom">
-              <div class="bar u-bg-primary bar-col-1" id="bar-bottom-1"></div>
-              <div class="bar u-bg-secondary bar-col-1" id="bar-bottom-2"></div>
-              <div class="bar u-bg-secondary bar-col-2" id="bar-bottom-3"></div>
-              <div class="bar u-bg-secondary bar-col-3" id="bar-bottom-4"></div>
-              <div class="bar u-bg-primary bar-col-3" id="bar-bottom-5"></div>
-              <div class="bar u-bg-primary bar-col-5" id="bar-bottom-6"></div>
-              <div class="bar u-bg-secondary bar-col-5" id="bar-bottom-7"></div>
-            </div>
-          </div>
-          <div class="pie-wrapper">
-            <div class="pie" style="--v:90deg;--v2:90deg;--s:1;--s2:1"></div>
-          </div>
-          <div class="stats">
-            <div class="stats__1">
-              89.74%</br>
-              <span class="stats__text">More Productive</span>
-            </p></div>
-            <div class="stats__2">+1.5%</div>
-            <div class="stats__3">88.24%</div>
-          </div>
-          </div>
-
-        </div>
-      </section>
-      <section class="features container">
-        <div class="features__title">
-          <h1 class="heading heading--1">What's different about Manage?</h1>
-          <p class="text"> Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
-        </div>
-        <div class="features-item">
-          <div class="features-item__number">01</div>
-          <h4 class="features-item__title">Track company-wide progress</h4>
-          <p class="features-item__description text">See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.</p>
-        </div>
-        <div class="features-item">
-          <div class="features-item__number">02</div>
-          <h4 class="features-item__title">Advanced built-in reports</h4>
-          <p class="features-item__description text">Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.</p>
-        </div>
-        <div class="features-item">
-          <div class="features-item__number">03</div>
-          <h4 class="features-item__title">Everything you need in one place</h4>
-          <p class="features-item__description text">Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.</p>
-        </div>
-      </section>
-      <section class="testimonials-section">
-        <h1 class="heading heading--1 u-center-text u-margin-bottom-medium">What they've said</h1>
-        <div class="testimonials">
-          <div class="testimonial">
-            <img src="/images/avatar-anisha.png" alt="Anisha Li" class="testimonial__img">
-            <h3 class="testimonial__name u-margin-bottom-small">Anisha Li</h3>
-            <p class="text testimonial__quote">“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.”</p>
-          </div>
-          <div class="testimonial">
-            <img src="/images/avatar-ali.png" alt="Ali Bavo" class="testimonial__img">
-            <h3 class="testimonial__name u-margin-bottom-small">Ali Bravo</h3>
-            <p class="text testimonial__quote">“We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused.”</p>
-          </div>
-          <div class="testimonial">
-            <img src="/images/avatar-richard.png" alt="Richard Watts" class="testimonial__img">
-            <h3 class="testimonial__name u-margin-bottom-small">Richard Watts</h3>
-            <p class="text testimonial__quote">“Manage allows us to provide structure and process. It keeps us organized and focused. I can’t stop recommending them to everyone I talk to!”</p>
-          </div>
-          <div class="testimonial">
-            <img src="/images//avatar-shanai.png" alt="Shanai Gough" class="testimonial__img">
-            <h3 class="testimonial__name u-margin-bottom-small">Shanai Gough</h3>
-            <p class="text testimonial__quote">“Their software allows us to track, manage and collaborate on our projects from anywhere. It keeps the whole team in-sync without being intrusive.”</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    Get Started Simplify
-    how your team works today. Get Started Home Pricing Products About Us
-    Careers Community Privacy Policy Updates in your inbox… Go Copyright 2020.
-    All Rights Reserved
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+    </section>
+    <section class="cta">
+      <h2 class="heading heading--2">Simplify how your team works today.</h2>
+      <a href="#" class="btn btn--secondary">Get Started</a>
+    </section>
+  </main>
+  <footer class="footer">
+    <img src="/images/logo.svg" alt="Logo" class="header__logo">
+    <div class="socials">
+      <svg class="social-icon" xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+        <title>ionicons-v5_logos</title>
+        <path
+          d='M455.27,32H56.73A24.74,24.74,0,0,0,32,56.73V455.27A24.74,24.74,0,0,0,56.73,480H256V304H202.45V240H256V189c0-57.86,40.13-89.36,91.82-89.36,24.73,0,51.33,1.86,57.51,2.68v60.43H364.15c-28.12,0-33.48,13.3-33.48,32.9V240h67l-8.75,64H330.67V480h124.6A24.74,24.74,0,0,0,480,455.27V56.73A24.74,24.74,0,0,0,455.27,32Z' />
+      </svg>
+      <svg class="social-icon" xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+        <title>ionicons-v5_logos</title>
+        <path
+          d='M508.64,148.79c0-45-33.1-81.2-74-81.2C379.24,65,322.74,64,265,64H247c-57.6,0-114.2,1-169.6,3.6-40.8,0-73.9,36.4-73.9,81.4C1,184.59-.06,220.19,0,255.79q-.15,53.4,3.4,106.9c0,45,33.1,81.5,73.9,81.5,58.2,2.7,117.9,3.9,178.6,3.8q91.2.3,178.6-3.8c40.9,0,74-36.5,74-81.5,2.4-35.7,3.5-71.3,3.4-107Q512.24,202.29,508.64,148.79ZM207,353.89V157.39l145,98.2Z' />
+      </svg>
+      <svg class="social-icon" xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+        <title>ionicons-v5_logos</title>
+        <path
+          d='M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z' />
+      </svg>
+      <svg class="social-icon" xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+        <title>ionicons-v5_logos</title>
+        <path
+          d='M256.05,32c-123.7,0-224,100.3-224,224,0,91.7,55.2,170.5,134.1,205.2-.6-15.6-.1-34.4,3.9-51.4,4.3-18.2,28.8-122.1,28.8-122.1s-7.2-14.3-7.2-35.4c0-33.2,19.2-58,43.2-58,20.4,0,30.2,15.3,30.2,33.6,0,20.5-13.1,51.1-19.8,79.5-5.6,23.8,11.9,43.1,35.4,43.1,42.4,0,71-54.5,71-119.1,0-49.1-33.1-85.8-93.2-85.8-67.9,0-110.3,50.7-110.3,107.3,0,19.5,5.8,33.3,14.8,43.9,4.1,4.9,4.7,6.9,3.2,12.5-1.1,4.1-3.5,14-4.6,18-1.5,5.7-6.1,7.7-11.2,5.6-31.3-12.8-45.9-47-45.9-85.6,0-63.6,53.7-139.9,160.1-139.9,85.5,0,141.8,61.9,141.8,128.3,0,87.9-48.9,153.5-120.9,153.5-24.2,0-46.9-13.1-54.7-27.9,0,0-13,51.6-15.8,61.6-4.7,17.3-14,34.5-22.5,48a225.13,225.13,0,0,0,63.5,9.2c123.7,0,224-100.3,224-224S379.75,32,256.05,32Z' />
+      </svg>
+      <svg class="social-icon" xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+        <title>ionicons-v5_logos</title>
+        <path
+          d='M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z' />
+        <path d='M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z' />
+        <path
+          d='M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z' />
+      </svg>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="index.js"></script>
-  </body>
+    <ul class="footer__list footer__list--1">
+      <li class="footer__list-item">
+        <a href="#">Home</a>
+      </li>
+      <li class="footer__list-item">
+        <a href="#">Pricing</a>
+      </li>
+      <li class="footer__list-item">
+        <a href="#">Products</a>
+      </li>
+      <li class="footer__list-item">
+        <a href="#">About Us</a>
+      </li>
+    </ul>
+    <ul class="footer__list footer__list--2">
+      <li class="footer__list-item">
+        <a href="#">Careers</a>
+      </li>
+      <li class="footer__list-item">
+        <a href="#">Community</a>
+      </li>
+      <li class="footer__list-item">
+        <a href="#">Privacy Policy</a>
+      </li>
+    </ul>
+    <form class="signup-form">
+      <label for="text-input"></label>
+      <input id="text-input" required placeholder="Enter your email" type="text" class="input">
+    <button class="btn btn--primary">Go</button>
+    </form>
+    <p class="copyright text">Copyright 2020. All Rights Reserved</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>

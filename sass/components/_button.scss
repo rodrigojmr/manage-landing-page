@@ -10,9 +10,18 @@
     background-color: $color-primary;
     color: white;
   }
+  &--secondary {
+    background-color: white;
+    color: $color-primary;
+  }
 
   &:hover {
     transform: translateY(-2px);
     filter: brightness(130%);
+    box-shadow: 0 10px 7px 3px rgba(0, 0, 0, 0.1);
   }
+}
+
+button.btn {
+  border: none;
 }
