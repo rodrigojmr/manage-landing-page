@@ -144,13 +144,17 @@ body {
   color: #242d52; }
 
 .heading--1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: 600; }
+
+.heading--2 {
+  font-size: 2rem;
   font-weight: 600; }
 
 .text {
-  font-weight: 200;
-  letter-spacing: 0.12em;
-  line-height: 1.5; }
+  font-weight: 400;
+  line-height: 1.5;
+  color: #9095a7; }
 
 *,
 *::before,
@@ -181,13 +185,17 @@ body {
   color: #242d52; }
 
 .heading--1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: 600; }
+
+.heading--2 {
+  font-size: 2rem;
   font-weight: 600; }
 
 .text {
-  font-weight: 200;
-  letter-spacing: 0.12em;
-  line-height: 1.5; }
+  font-weight: 400;
+  line-height: 1.5;
+  color: #9095a7; }
 
 .u-center-text {
   text-align: center !important; }
@@ -232,15 +240,16 @@ body {
 
 .hero {
   display: flex;
-  padding: 100px 0; }
+  padding: 50px 0; }
   .hero > * {
     flex: 0 0 50%; }
   .hero__text {
     padding-left: 30px;
-    text-align: left; }
+    text-align: left;
+    letter-spacing: 0.12em; }
   .hero .heading {
     font-size: 4rem;
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 30px; }
 
 .header {
@@ -264,6 +273,78 @@ body {
     .nav-list__link:hover {
       color: #9095a7; }
 
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 50px;
+  row-gap: 3rem;
+  padding: 50px 0; }
+  .features__title {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1; }
+    .features__title .heading {
+      margin-bottom: 20px; }
+    .features__title .text {
+      max-width: 400px; }
+
+.features-item {
+  display: grid;
+  grid-template-columns: min-content, 1fr;
+  grid-template-rows: repeat(2, min-content);
+  gap: 15px;
+  align-items: center; }
+  .features-item__number {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 1.25rem 0.6rem;
+    border-radius: 20px;
+    background-color: #f25f3a;
+    color: white;
+    font-size: 1.1rem; }
+  .features-item__title, .features-item__description {
+    grid-column: 2/3; }
+  .features-item__title {
+    font-weight: 600; }
+
+.testimonials-section {
+  padding: 50px 0; }
+
+.testimonials {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 20px repeat(4, 30%) 20px;
+  overflow: auto;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  padding: 50px 0; }
+  .testimonials::-webkit-scrollbar {
+    display: none; }
+  .testimonials::before, .testimonials::after {
+    content: ''; }
+
+.testimonial {
+  position: relative;
+  padding: 3rem 2rem;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .testimonial:hover .testimonial__img {
+    top: -38px; }
+  .testimonial__img {
+    position: absolute;
+    top: -33px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 65px;
+    width: 65px;
+    transition: all 0.2s; }
+  .testimonial__name {
+    font-weight: 600; }
+
 .btn {
   display: inline-block;
   padding: 1rem 1.5rem;
@@ -279,10 +360,9 @@ body {
 
 .graph {
   display: grid;
-  grid-template-columns: repeat(4, 125px);
-  grid-template-rows: repeat(3, 250px);
+  grid-template-columns: repeat(4, calc(250px / 2));
+  grid-template-rows: repeat(2, 250px);
   gap: 10px;
-  grid-template-areas: '';
   align-items: flex-start; }
   .graph > * {
     background-color: white;
@@ -339,15 +419,30 @@ div[id^='bar-bottom-'] {
 
 .stats {
   grid-column: 2 / 4;
-  display: flex;
-  flex-wrap: wrap; }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px; }
   .stats > * {
-    background-color: #f0ebeb; }
+    background-color: #f0ebeb;
+    padding: 1rem;
+    border-radius: 7px; }
   .stats__text {
     font-size: 1.3rem; }
   .stats__1 {
+    grid-row: 1/2;
+    grid-column: 1/3;
     flex: 0 0 100%;
     font-size: 2rem;
     font-weight: 700; }
   .stats__2, .stats__3 {
-    flex: 50%; }
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.2rem; }
+  .stats__2 {
+    grid-column: 1/2;
+    background-color: #f25f3a;
+    color: white; }
+  .stats__3 {
+    grid-column: 2/3; }
