@@ -1,14 +1,24 @@
 .cta {
   position: relative;
-  padding: 4rem 5vw;
+  padding: 4rem 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $color-primary;
   color: white;
   overflow: hidden;
+  @media screen and (max-width: 580px) {
+    flex-direction: column;
+
+    .heading {
+      margin-bottom: 20px;
+    }
+  }
+
   .btn {
     z-index: 1;
+    flex-shrink: 0;
+    margin-left: 20px;
   }
 
   &::before {

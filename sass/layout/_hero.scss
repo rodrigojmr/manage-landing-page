@@ -14,7 +14,11 @@
     }
   }
   &__text {
-    padding-left: 30px;
+    padding: 0 30px;
+    @media screen and (min-width: 1200px) {
+      padding-right: 0;
+      padding-left: 30px;
+    }
     text-align: left;
     letter-spacing: 0.12em;
   }
@@ -23,6 +27,19 @@
     font-size: 4rem;
     font-weight: 800;
     margin-bottom: 30px;
+    @media screen and (max-width: 600px) {
+      font-size: 10vw;
+    }
+  }
+
+  .text {
+    @media screen and (min-width: 1200px) {
+      max-width: 400px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 1200px) {
+      width: 60%;
+      margin: 0 auto;
+    }
   }
 }
 

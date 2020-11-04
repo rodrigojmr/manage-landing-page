@@ -6,6 +6,7 @@
   row-gap: 3rem;
   padding-top: 50px;
   padding-bottom: 50px;
+  overflow-x: hidden;
 
   @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr;
@@ -20,9 +21,14 @@
 
     .heading {
       margin-bottom: 20px;
+      @media screen and (max-width: 1200px) {
+        text-align: center;
+      }
     }
     .text {
-      max-width: 400px;
+      @media screen and (min-width: 1200px) {
+        max-width: 400px;
+      }
     }
   }
 }

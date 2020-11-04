@@ -1,17 +1,22 @@
-$graph-square: 250px;
-
 .graph {
   display: grid;
-  grid-template-columns: repeat(4, calc(#{$graph-square} / 2));
-  grid-template-rows: repeat(2, $graph-square);
+  @media screen and (min-width: 550px) {
+    grid-template-columns: repeat(4, calc(#{250px} / 2));
+    grid-template-rows: repeat(2, 250px);
+  }
+  grid-template-columns: repeat(4, 20vw);
+  grid-template-rows: repeat(2, 50vw);
   gap: 10px;
 
   > * {
     background-color: white;
     border-radius: 15px;
-    padding: 40px;
     width: 100%;
     height: 100%;
+    padding: 20px;
+    @media screen and (max-width: 550px) {
+      padding: 3vw;
+    }
   }
 
   align-items: flex-start;
@@ -70,17 +75,24 @@ div[id^='bar-bottom-'] {
   align-items: center;
 }
 .pie {
-  width: 150px;
-  height: 150px;
+  margin: 0 auto;
+  width: 25vw;
+  height: 25vw;
   display: inline-block;
   border-radius: 50%;
-  border: 35px solid transparent;
+  border: 7vw solid transparent;
   background: linear-gradient(#fff, #fff) padding-box,
     linear-gradient(var(--v), $color-primary 50%, transparent 0)
       center/calc(var(--s) * 100%) border-box,
     linear-gradient(var(--v2), $color-secondary 50%, transparent 0)
       center/calc(100% - var(--s2) * 100%) border-box,
     linear-gradient(to right, #fff 50%, $color-secondary 0) border-box;
+
+  @media screen and (min-width: 550px) {
+    border: 35px solid transparent;
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .stats {
@@ -92,6 +104,11 @@ div[id^='bar-bottom-'] {
   gap: 20px;
   padding: 20px;
 
+  @media screen and (max-width: 600px) {
+    padding: 3vw;
+    gap: 3vw;
+  }
+
   & > * {
     background-color: rgb(240, 235, 235);
     padding: 1rem;
@@ -100,6 +117,9 @@ div[id^='bar-bottom-'] {
 
   &__text {
     font-size: 1.3rem;
+    @media screen and (max-width: 600px) {
+      font-size: 3vw;
+    }
   }
 
   &__1 {
@@ -108,12 +128,19 @@ div[id^='bar-bottom-'] {
     flex: 0 0 100%;
     font-size: 2rem;
     font-weight: 700;
+    @media screen and (max-width: 600px) {
+      font-size: 6vw;
+    }
   }
   &__2,
   &__3 {
     display: flex;
     align-items: flex-end;
     font-size: 1.2rem;
+
+    @media screen and (max-width: 600px) {
+      font-size: 3vw;
+    }
   }
 
   &__2 {
